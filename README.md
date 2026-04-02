@@ -22,6 +22,13 @@ Or build from source:
 cargo install --path .
 ```
 
+For GPU acceleration, enable the appropriate feature:
+
+```bash
+cargo install --path . --features metal  # macOS (Metal)
+cargo install --path . --features cuda   # NVIDIA (CUDA toolkit required)
+```
+
 ## Usage
 
 ```bash

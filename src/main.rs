@@ -78,7 +78,9 @@ fn main() -> Result<()> {
     let device = if args.cpu {
         Device::Cpu
     } else {
-        Device::new_metal(0).unwrap_or(Device::Cpu)
+        Device::new_cuda(0)
+            .or_else(|_| Device::new_metal(0))
+            .unwrap_or(Device::Cpu)
     };
 
     // Load model
