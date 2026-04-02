@@ -4,7 +4,7 @@ Auto [nine-patch](https://developer.android.com/develop/ui/views/graphics/drawab
 
 | Original | Detected Slices | Stretched Wide | Stretched Tall |
 |:---:|:---:|:---:|:---:|
-| ![](examples/item_slot_frame.png) | ![](examples/item_slot_frame_slices.png) | ![](examples/item_slot_frame_wide.png) | |
+| ![](examples/item_slot_frame.png) | ![](examples/item_slot_frame_slices.png) | ![](examples/item_slot_frame_wide.png) | ![](examples/item_slot_frame_tall.png) |
 | ![](examples/kenney_button.png) | ![](examples/kenney_button_slices.png) | ![](examples/kenney_button_wide.png) | ![](examples/kenney_button_tall.png) |
 
 <sub>Button asset from [Kenney's UI Pack](https://www.kenney.nl/assets/ui-pack) (CC0)</sub>
