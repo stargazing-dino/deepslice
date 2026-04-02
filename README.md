@@ -2,9 +2,12 @@
 
 Auto [nine-patch](https://developer.android.com/develop/ui/views/graphics/drawables#nine-patch) slicer powered by ML. Feed it a UI element, get back stretchable regions — no manual slicing.
 
-| Original | Detected Slices | Stretched 800x500 |
-|:---:|:---:|:---:|
-| ![](examples/item_slot_frame.png) | ![](examples/item_slot_frame_slices.png) | ![](examples/item_slot_frame_wide.png) |
+| Original | Detected Slices | Stretched Wide | Stretched Tall |
+|:---:|:---:|:---:|:---:|
+| ![](examples/item_slot_frame.png) | ![](examples/item_slot_frame_slices.png) | ![](examples/item_slot_frame_wide.png) | |
+| ![](examples/kenney_button.png) | ![](examples/kenney_button_slices.png) | ![](examples/kenney_button_wide.png) | ![](examples/kenney_button_tall.png) |
+
+<sub>Button asset from [Kenney's UI Pack](https://www.kenney.nl/assets/ui-pack) (CC0)</sub>
 
 ## Install
 
