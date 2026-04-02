@@ -55,8 +55,14 @@ fn preprocess(img: &image::DynamicImage, device: &Device) -> Result<Tensor> {
     let resized = rgb.resize_exact(224, 224, image::imageops::FilterType::Lanczos3);
     let rgb = resized.to_rgb8();
 
+    let mean = [0.485f32, 0.456, 0.406];
+    let std = [0.229f32, 0.224, 0.225];
     let data: Vec<f32> = rgb.pixels()
-        .flat_map(|p| p.0.iter().map(|&v| v as f32 / 255.0))
+        .flat_map(|p| {
+            p.0.iter().enumerate().map(|(c, &v)| {
+                (v as f32 / 255.0 - mean[c]) / std[c]
+            })
+        })
         .collect();
 
     let tensor = Tensor::from_vec(data, (224, 224, 3), device)?

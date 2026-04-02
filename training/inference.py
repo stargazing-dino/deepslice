@@ -28,8 +28,11 @@ def preprocess(image: Image.Image) -> torch.Tensor:
     # Resize to 224x224
     img = image.convert("RGB").resize((224, 224), Image.Resampling.LANCZOS)
 
-    # Convert to tensor and normalize to [0, 1]
+    # Convert to tensor and apply ImageNet normalization
     arr = np.array(img, dtype=np.float32) / 255.0
+    mean = np.array([0.485, 0.456, 0.406], dtype=np.float32)
+    std = np.array([0.229, 0.224, 0.225], dtype=np.float32)
+    arr = (arr - mean) / std
 
     # HWC -> CHW
     tensor = torch.from_numpy(arr).permute(2, 0, 1)
